@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<div>
+	<form action="/processform">
+		<label for="mnC">Minimum Number of Characters</label>
+		<select name="mnC">
+			{%for num in pL%}
+				<option value={{num}}>{{num}}</option>
+			{%endfor%}
+		</select><br/>
+		<label for="mnC">Minimum Number of Characters</label>
+		<select name="mxC">
+			{%for num in pL%}
+				<option value={{num}}>{{num}}</option>
+			{%endfor%}
+		</select><br/>
+		<label for="MnL">Minimum Word Length</label>
+		<select name="MnL">
+			{%for num in wL%}
+				<option value={{num}}>{{num}}</option>
+			{%endfor%}
+		</select><br/>
+		<label for="MxL">Maximum Word Length</label>
+		<select name="MxL">
+			{%for num in wL%}
+				<option value={{num}}>{{num}}</option>
+			{%endfor%}
+		</select><br/>
+		<input type="submit"></input>
+	</form>
+	</div>
+	<h1>{{password}}</h1>
+{% endblock %}
